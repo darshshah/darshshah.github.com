@@ -2,80 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Optical Sense</title>
-<style type="text/css">
-<!--
-#div1 {
-position:relative;
- top:0;
- float:left;
- width:140px;
-}
-#div2 {
-  position:relative;
-  float:right;
- top:0px;
- width:595; 
- 
-}
-
-body,td,th {
-	font-family: Myriad Pro, Myriad Pro Cond, Myriad Pro Light, Garamond, serif;
-}
-body {
-	background-image: url(Images/bg11.jpg);
-	margin-left: 20%;
-	margin-top: 20px;
-	margin-right: 20%;
-	margin-bottom: 20px;
-}
-a:link {
-	color: #000000;
-	text-decoration: none;
-}
-a:visited {
-	text-decoration: none;
-	color: #000000;
-}
-a:hover {
-	text-decoration: none;
-	color: #CC0000;
-}
-a:active {
-	text-decoration: none;
-	color: #CC0000;
-}
-.style1 {
-	font-size: 36pt;
-	margin: 0px;
-	padding: 0px;
-}
-.style2 {
-	font-size: 14pt;
-	margin: 0px;
-	padding: 0px;
-	color: #000000;
-	border-top-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-	border-left-width: 0px;
-	border-top-style: none;
-	border-right-style: none;
-	border-bottom-style: none;
-	border-left-style: none;
-}
-.style3 {
-	font-family: "Myriad Pro", "Myriad Pro Cond", "Myriad Pro Light", Garamond, serif;
-	font-size: 16pt;
-}
-.style4 {
-font-family: "Myriad Pro", "Myriad Pro Cond", "Myriad Pro Light", Garamond, serif;
-	font-size: 20pt;
-	color: #CC0000;
-}
-
--->
-</style></head>
+<title>RTC</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
 
 <body>
 <div align="center" id="div0" >
@@ -84,15 +13,24 @@ font-family: "Myriad Pro", "Myriad Pro Cond", "Myriad Pro Light", Garamond, seri
 </div>
 <br />
 <br />
-<div id="div1">
-<p align="right" class="style3"><a href="../About Me.html">About Me</a></p>
+
+	<div id="div1">
+	<p align="right" class="style3"><a href="../About Me.html">About Me</a></p>
 <p align="right" class="style3"><a href="../Projects.html">Projects</a></p>
 <p align="right" class="style3"><a href="../Academics.html">Academics</a></p>
 <p align="right" class="style3"><a href="../Skills.html">Skills</a></p>
 <p align="right" class="style3"><a href="../Resume.html">Resume</a></p>
 <p align="right" class="style3"><a href="http://blog.darshshah.org/" target="_blank">Blog</a></p>
-<p align="right" class="style3"><a href="../Contact.html">Contact</a> </p>
+<p align="right" class="style3"><a href="../Contact.html">Contact</a> </p></div>
+
+  <div id="div2">  <p class="style5">We made a Real Time Clock in software which is used for doing a task based on the time of the day. RTC chips are available in market and are used in almost every application which needs a real time clock.They precisely calculate the time.</p>
+  <p class="style5">We implemented it using Atmega32 controller. We used timer1 at 8MHz frequency and used switches for time input and LCD for output. In our code, we first ask the user to enter the the time at which the system should start, for how much time to be on, after getting over - after what interval should be restart and how many times per day it should run. The current time is fed to the microcontroller using USART, but switches can also be used.<br />
+    Finally, the data is displayed on the LCD while the user is pressing the switches and manipulating it. The output is connected to motor, which runs when current time=desired time. </p>
+  <p class="style5">One thing to notice is that using 8MHz freq clock, so even though I am giving interrupt at every 1 sec, an error of approximately 50 seconds per day.<br />
+    So, we have to add 50 secs to each day. Instead, you can use a external crystal for minimizing the error. </p>
+  <p class="style5">I was in charge of the coding the RTC and helped in hardware testing. </p>
+  <p class="style5">The image below shows the block diagram of the system. </p><p align="left" class="style5"><img src="Images/rtc_block.png" alt="block diagram" width="500" height="400" /></p>
 </div>
-<div id="div2"> </div>
+  
 </body>
 </html>

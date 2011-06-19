@@ -2,80 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Optical Sense</title>
-<style type="text/css">
-<!--
-#div1 {
-position:relative;
- top:0;
- float:left;
- width:140px;
-}
-#div2 {
-  position:relative;
-  float:right;
- top:0px;
- width:595; 
- 
-}
-
-body,td,th {
-	font-family: Myriad Pro, Myriad Pro Cond, Myriad Pro Light, Garamond, serif;
-}
-body {
-	background-image: url(Images/bg11.jpg);
-	margin-left: 20%;
-	margin-top: 20px;
-	margin-right: 20%;
-	margin-bottom: 20px;
-}
-a:link {
-	color: #000000;
-	text-decoration: none;
-}
-a:visited {
-	text-decoration: none;
-	color: #000000;
-}
-a:hover {
-	text-decoration: none;
-	color: #CC0000;
-}
-a:active {
-	text-decoration: none;
-	color: #CC0000;
-}
-.style1 {
-	font-size: 36pt;
-	margin: 0px;
-	padding: 0px;
-}
-.style2 {
-	font-size: 14pt;
-	margin: 0px;
-	padding: 0px;
-	color: #000000;
-	border-top-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-	border-left-width: 0px;
-	border-top-style: none;
-	border-right-style: none;
-	border-bottom-style: none;
-	border-left-style: none;
-}
-.style3 {
-	font-family: "Myriad Pro", "Myriad Pro Cond", "Myriad Pro Light", Garamond, serif;
-	font-size: 16pt;
-}
-.style4 {
-font-family: "Myriad Pro", "Myriad Pro Cond", "Myriad Pro Light", Garamond, serif;
-	font-size: 20pt;
-	color: #CC0000;
-}
-
--->
-</style></head>
+<title>Mutli Encoder System</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
 
 <body>
 <div align="center" id="div0" >
@@ -93,6 +22,20 @@ font-family: "Myriad Pro", "Myriad Pro Cond", "Myriad Pro Light", Garamond, seri
 <p align="right" class="style3"><a href="http://blog.darshshah.org/" target="_blank">Blog</a></p>
 <p align="right" class="style3"><a href="../Contact.html">Contact</a> </p>
 </div>
-<div id="div2"> </div>
+<div class="style5" id="div2">
+  <p>Encoding/Line code means to wrap data in some format or send it with other redundant data, so that it can be easily recovered at the receiver side even tough noise is present. Various encoding schemes are used keeping in the mind the amount of data to be transferred and the noise in the system/channel. In this project, we implemented 3 encoding schemes in hardware namely <strong>Manchester coding</strong>,<strong> Non Return to Zero Inverse (NRZI)</strong> and<strong> 4B-5B schemes</strong>. </p>
+  <p> We made a system in which all 3 encoding schemes are implemented and the user chooses than by selecting the proper combination of the input switches. The data is given via the 16 switches and the output can be seen on the oscilloscope. </p>
+  <p> Implementing the system in Verilog was easy but the demonstration on the real FPGA kit was a bit difficult as the hardware has its own limitations. The Spartan 3 FPGA kit was used for the project. </p>
+  <p>The Images below show the output if the schemes:</p>
+  <table width="584" border="0">
+  <tr>
+    <td width="199"><img src="Images/4b5b.png" alt="4b 5b" width="121" height="200" /></td>
+    <td width="201"><img src="Images/mc.png" alt="mancheser coding" width="121" height="200" /></td>
+    <td width="170"><img src="Images/nrzi.png" alt="nrzi" width="121" height="200" /></td>
+  </tr>
+</table>
+</p>
+<p>I was in charge of writing the verilog code and testing it on the hardware. </p>
+</div>
 </body>
 </html>
