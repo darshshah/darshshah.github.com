@@ -68,3 +68,14 @@ a:active {
 .style5 {
 	font-size: 12pt;
 }
+
+.right
+{
+         float: right; /*right in our text*/
+         margin: 10px; /*space around the image*/
+}
+.left
+{
+         float: left; /*right in our text*/
+         margin: 10px; /*space around the image*/
+}
