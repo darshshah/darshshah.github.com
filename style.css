@@ -1,6 +1,6 @@
 /* CSS Document */
 
-@import url(http://fonts.googleapis.com/css?family=Sue+Ellen+Francisco&v1);
+@import url(http://fonts.googleapis.com/css?family=Molengo&v1);
 
 #div0 {
  width:100%;
@@ -28,7 +28,7 @@ padding-top: 30px;
 display: block;
 }
 body,td,th {
-	font-family: Sue Ellen Francisco, Myriad Pro, Myriad Pro Cond, Myriad Pro Light, Garamond, serif;
+	font-family: Molengo, Myriad Pro, Myriad Pro Cond, Myriad Pro Light, Garamond, serif;
 }
 body {
 	margin-left: 20%;
