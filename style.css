@@ -56,18 +56,15 @@ a:active {
 }
 
 .style0 {
-	font-family: "Myriad Pro", "Myriad Pro Cond", "Myriad Pro Light", Garamond, serif;
 	font-size: 20pt;
 }
 
 .style1 {
-	font-family: "Myriad Pro", "Myriad Pro Cond", "Myriad Pro Light", Garamond, serif;
 	font-size: 36pt;
 	margin: 0px;
 	padding: 0px;
 }
 .style2 {
-	font-family: "Myriad Pro", "Myriad Pro Cond", "Myriad Pro Light", Garamond, serif;
 	font-size: 14pt;
 	margin: 0px;
 	padding: 0px;
@@ -82,20 +79,17 @@ a:active {
 	border-left-style: none;
 }
 .style3 {
-	font-family: "Myriad Pro", "Myriad Pro Cond", "Myriad Pro Light", Garamond, serif;
 	font-size: 16pt;
 }
 .style4 {
-	font-family: "Myriad Pro", "Myriad Pro Cond", "Myriad Pro Light", Garamond, serif;
 	font-size: 20pt;
 	color: #CC0000;
 }
-.style5 {font-family: "Myriad Pro", "Myriad Pro Cond", "Myriad Pro Light", Garamond, serif; 
+.style5 {
 	font-size: 14pt; 
 }
 
 .style6 {
-	font-family: "Myriad Pro", "Myriad Pro Cond", "Myriad Pro Light", Garamond, serif;
 	font-size: 12pt;
 }
 .style7 {
@@ -110,11 +104,9 @@ a:active {
 }
 
 .link1 {
-	font-family: "Myriad Pro", "Myriad Pro Cond", "Myriad Pro Light", Garamond, serif;
 	color: #CC0000;
 }
 .link2 {
-	font-family: "Myriad Pro", "Myriad Pro Cond", "Myriad Pro Light", Garamond, serif;
 	font-size: 12pt;
 	color: #CC0000;
 	text-decoration: underline;
