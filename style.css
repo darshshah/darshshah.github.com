@@ -1,15 +1,6 @@
 /* CSS Document */
 
 @import url(http://fonts.googleapis.com/css?family=Molengo&v1);
-div#wrapper {
-width: 80%;
-background-color:#FFFFFF;
-margin-left: auto;
-margin-right: auto;
-padding: 0px;
-border: thin solid #000000;
-
-}
 
 #div0 {
  width:100%;
@@ -28,6 +19,10 @@ position:relative;
   width:75%; 
  
 }
+
+#tooltip1 { position: relative; }
+#tooltip1 a span { display: none; color: #FFFFFF; }
+#tooltip1 a:hover span { display: block; position: relative; width:auto; background-color:transparent; height:auto; left:auto top:auto; color:#0000CC; padding: 5px; }
  
 #footer {
  width:100%;
@@ -120,3 +115,4 @@ a:active {
 	color: #CC0000;
 	text-decoration: underline;
 }
+
