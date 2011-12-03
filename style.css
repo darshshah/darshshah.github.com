@@ -1,6 +1,15 @@
 /* CSS Document */
 
 @import url(http://fonts.googleapis.com/css?family=Molengo&v1);
+div#wrapper {
+width: 80%;
+background-color:#FFFFFF;
+margin-left: auto;
+margin-right: auto;
+padding: 0px;
+border: thin solid #000000;
+
+}
 
 #div0 {
  width:100%;
@@ -35,8 +44,8 @@ body {
 	margin-top: 20px;
 	margin-right: 20%;
 	margin-bottom: 20px;
-	/*background-image: url(Images/bg11.jpg);
-	background-repeat: repeat;*/
+	background-image: url(Images/new_bg.jpg);
+	background-repeat: repeat;
 }
 a:link {
 	color: #000000;
