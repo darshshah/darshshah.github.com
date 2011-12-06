@@ -16,6 +16,14 @@ position:relative;
  width:75%; 
  
 }
+
+#footer {
+ width:100%;
+ text-align: center;
+clear: both;
+padding-top: 30px;
+display: block;
+}
  
 body,td,th {
 	font-family: Molengo, Myriad Pro, Myriad Pro Cond, Myriad Pro Light, Garamond, serif;
@@ -65,14 +73,14 @@ a:active {
 .style5 {
 	font-size: 12pt;
 }
-
+/*
 .right
 {
-         float: right; /*right in our text*/
-         margin: 10px; /*space around the image*/
+         float: right; /*right in our text
+         margin: 10px; /*space around the image
 }
 .left
 {
-         float: left; /*right in our text*/
-         margin: 10px; /*space around the image*/
-}
+         float: left; /*right in our text
+         margin: 10px; /*space around the image
+}*/
