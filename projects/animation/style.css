@@ -1,0 +1,86 @@
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Molengo&v1);
+
+#div1 {
+position:relative;
+ top:0;
+ float:left;
+ width:20%;
+ 
+}
+#div2 {
+ position:relative;
+  float:right;
+ top:8px;
+ width:75%; 
+ 
+}
+
+#footer {
+ width:100%;
+ text-align: center;
+clear: both;
+padding-top: 30px;
+display: block;
+}
+ 
+body,td,th {
+	font-family: Molengo, Myriad Pro, Myriad Pro Cond, Myriad Pro Light, Garamond, serif;
+}
+body {
+	margin-left: 20%;
+	margin-top: 20px;
+	margin-right: 20%;
+	margin-bottom: 20px;
+	background-image: url(new_bg.jpg);
+	background-repeat: repeat;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: none;
+	color: #CC0000;
+}
+a:active {
+	text-decoration: none;
+	color: #CC0000;
+}
+.style1 {
+	font-size: 36pt;
+	margin: 0px;
+	padding: 0px;
+}
+.style2 {
+	font-size: 14pt;
+	margin: 0px;
+	padding: 0px;
+	color: #000000;
+}
+.style3 {
+	font-size: 16pt;
+}
+.style4 {
+	font-size: 20pt;
+	color: #CC0000;
+}
+.style5 {
+	font-size: 12pt;
+}
+/*
+.right
+{
+         float: right; /*right in our text
+         margin: 10px; /*space around the image
+}
+.left
+{
+         float: left; /*right in our text
+         margin: 10px; /*space around the image
+}*/
