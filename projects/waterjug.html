@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>FFT on FPGA</title>
+<title>Self Dispensing Jug</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
@@ -23,15 +23,14 @@
 <p align="right" class="style3"><a href="../Contact.html">Contact</a> </p>
 </div>
 <div class="style5" id="div2">
-  <p>Made a DFT solver on the FPGA. We used the butterfly structure of the radix 2 FFT algorithm and the concurrency of FPGA to solve the DFT equations. We decided to solved  4 point DFT using FFT algorithm.</p>
-  <p align="center"> <img src="Images/butterfly.png" alt="butterfly algo" width="220" height="95" /></p>
-  <p>Inputs were taken from Function Generator and sampled via ADC and results were displayed on CRO and the LEDs. We used Spartan 3 FPGA kit and Verilog language. Xilinx IDE was used for coding. </p>
-  <p>After writing the code, we optimized it and did various routing and also power analysis.</p>
-  <p>The below image shows the clock route for our code. </p>
-  <p align="center"><img src="Images/clock route.jpg" alt="clock route" width="205" height="193" /></p>
+  <p> In Feb 2009, I and my friends participated in Re-Kriti. It is an event organized during Synapse 2009 and was supported by National Innovation Foundation. The aim of the event was to provide some innovative solution for a given problem. Our team was taken a task to design a Self Dispensing Jug. </p>
+  
+<p> The problem statement mentioned that the jug should be able to detect the presence of glass, so we had a LDR circuit to do this function. It also mentioned that the jug should stop dispensing automatically. Therefore we had a timer circuit. We also had a water level detector in tank which detects low water level. Apart from these, we also kept an electromagnetic valve for water ejection. </p>
+  
+<p> The whole system could be assembled in just Rs. 350. We won consolation prize for it. </p>
 
- <p align="center"><a href="microfpga.html">back</a></p> 
-
+<img src="Images/jug.JPG" alt="jug" align="middle" width="200" height="300" />  
+ <p align="center"> <a href="misc.html">back</a> </p> 
 </div>
 </body>
 </html>

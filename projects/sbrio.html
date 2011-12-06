@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>FFT on FPGA</title>
+<title>IR controlled sbRIO</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
@@ -23,15 +23,11 @@
 <p align="right" class="style3"><a href="../Contact.html">Contact</a> </p>
 </div>
 <div class="style5" id="div2">
-  <p>Made a DFT solver on the FPGA. We used the butterfly structure of the radix 2 FFT algorithm and the concurrency of FPGA to solve the DFT equations. We decided to solved  4 point DFT using FFT algorithm.</p>
-  <p align="center"> <img src="Images/butterfly.png" alt="butterfly algo" width="220" height="95" /></p>
-  <p>Inputs were taken from Function Generator and sampled via ADC and results were displayed on CRO and the LEDs. We used Spartan 3 FPGA kit and Verilog language. Xilinx IDE was used for coding. </p>
-  <p>After writing the code, we optimized it and did various routing and also power analysis.</p>
-  <p>The below image shows the clock route for our code. </p>
-  <p align="center"><img src="Images/clock route.jpg" alt="clock route" width="205" height="193" /></p>
-
- <p align="center"><a href="microfpga.html">back</a></p> 
-
+  <p> One of the highlights of the robotics course was that we had to work on LabView and deploy our code on sbRIO robot. This robot from National Instruments has a FPGA along with a processor and supports LAbView graphical programming.</p> 
+  <p> We were given a task to control this robot wirelesly using Infrared. The foremost task was to learn LabView. After that, we made a receiver module containing TSOP1738 and connecting it to the FPGA on the robot. The transitter had a IR led connected to STK500. The IR led modulated the data sent to it by microcontroller at 38 KHz and send it to the receiver. For movement in different directions, differecnt code is sent via the STK500. </p>
+  <p> The receiver on the robot and the IR transmitter is shown below </p>
+  <p><img src="Images/sbrioir.jpg" alt="sbrio robot" align=middle /> </p>
+   <p align="center"><a href="robotics.html">back</a></p> 
 </div>
 </body>
 </html>

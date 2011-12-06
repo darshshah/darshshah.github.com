@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>FFT on FPGA</title>
+<title>DSR for WSN</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
@@ -23,15 +23,10 @@
 <p align="right" class="style3"><a href="../Contact.html">Contact</a> </p>
 </div>
 <div class="style5" id="div2">
-  <p>Made a DFT solver on the FPGA. We used the butterfly structure of the radix 2 FFT algorithm and the concurrency of FPGA to solve the DFT equations. We decided to solved  4 point DFT using FFT algorithm.</p>
-  <p align="center"> <img src="Images/butterfly.png" alt="butterfly algo" width="220" height="95" /></p>
-  <p>Inputs were taken from Function Generator and sampled via ADC and results were displayed on CRO and the LEDs. We used Spartan 3 FPGA kit and Verilog language. Xilinx IDE was used for coding. </p>
-  <p>After writing the code, we optimized it and did various routing and also power analysis.</p>
-  <p>The below image shows the clock route for our code. </p>
-  <p align="center"><img src="Images/clock route.jpg" alt="clock route" width="205" height="193" /></p>
-
- <p align="center"><a href="microfpga.html">back</a></p> 
-
+  <p> During one of my course in Network Protocl, I was given to make an optimized routing protocol for Wireless Sensor Networks. The task was to design a protocol and simulate in Network Simulator 2 (NS2)</p>
+  <p> So, the best way to thing about a problem is to do a lot fo background study and so I read research papers about protocol design in WSN. The T-MAC and SMAC protocols are quite good and reading the papers helped me to think about a possible solution. </p>
+  <p> Looking at various routing mechanism, I found that using a reactive i.e. on demand routing protocol is better than a proactive protocol. So, as Dynamic source routing was already implemetned, I modified DSR and introduced Load balancing into it. The source node makes the decision on which route to choose for optimized load balancing. I modified the source code of DSR and implemented my version in NS2. Currently, I am working on data aggregation techniques in my modified DSR</p>
+   <p align="center"> <a href="sensor network.html">back</a> </p>  
 </div>
 </body>
 </html>

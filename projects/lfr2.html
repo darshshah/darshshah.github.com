@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>FFT on FPGA</title>
+<title>LFR v2</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
@@ -23,15 +23,12 @@
 <p align="right" class="style3"><a href="../Contact.html">Contact</a> </p>
 </div>
 <div class="style5" id="div2">
-  <p>Made a DFT solver on the FPGA. We used the butterfly structure of the radix 2 FFT algorithm and the concurrency of FPGA to solve the DFT equations. We decided to solved  4 point DFT using FFT algorithm.</p>
-  <p align="center"> <img src="Images/butterfly.png" alt="butterfly algo" width="220" height="95" /></p>
-  <p>Inputs were taken from Function Generator and sampled via ADC and results were displayed on CRO and the LEDs. We used Spartan 3 FPGA kit and Verilog language. Xilinx IDE was used for coding. </p>
-  <p>After writing the code, we optimized it and did various routing and also power analysis.</p>
-  <p>The below image shows the clock route for our code. </p>
-  <p align="center"><img src="Images/clock route.jpg" alt="clock route" width="205" height="193" /></p>
-
- <p align="center"><a href="microfpga.html">back</a></p> 
-
+	<p> During semester 7, I had taken robotics course. It was the first time this course was offered at DA-IICT. As always, the first project to be done in any robotics course is to make a line follower robot. So this is the robot which I build for this course.</p>
+    <p> This robot has ATmega32 as its controller. The L293d motor driver is connected to the controller and the wheels. The sensors contain a panel of IR leds. When the led is on white surface, the reflection is more. When it is on black surface, the reflection is less. Using this technique, a successful line follower was built. </p>
+    <p> I also hooked up Sharp distance sensor to it and so this robot stops at 50 cm from any wall or human obstacle.</p>
+  <p>Below is the top view of the robot </p>
+  <p><img src="Images/lfrv22.jpg" alt="lfr version2" align="middle" /> </p>
+   <p align="center"><a href="robotics.html">back</a></p> 
 </div>
 </body>
 </html>
