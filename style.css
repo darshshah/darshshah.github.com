@@ -56,7 +56,7 @@ a:hover {
 }
 a:active {
 	text-decoration: none;
-	color: #CC0000;
+	color: #000099;
 }
 
 .style0 {
@@ -109,9 +109,17 @@ a:active {
 	text-decoration: underline;
 }
 .style9 {
-	font-size: 16pt;
-	color:#F00
-}
+	font-size: 18pt;
+	color:#00C;
+	}
+
+.style10 {
+	font-size: 12pt;
+	color:#00C;
+	}
+.style11 {
+color:#00C;
+	}
 
 .link1 {
 	color: #CC0000;
@@ -121,4 +129,3 @@ a:active {
 	color: #CC0000;
 	text-decoration: underline;
 }
-
