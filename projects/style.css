@@ -1,21 +1,34 @@
 /* CSS Document */
 
 @import url(http://fonts.googleapis.com/css?family=Molengo&v1);
-
+#div0 {
+ width:100%;
+ padding:10px;
+}
 #div1 {
 position:relative;
  top:0;
  float:left;
  width:20%;
- 
+
 }
 #div2 {
  position:relative;
   float:right;
  top:8px;
- width:75%; 
+ width:75%;
+
  
 }
+#wrapper {
+    width: 900px;
+    margin: 0 auto;
+    text-align: left;
+	margin-left: auto; 
+	margin-right: auto;
+	background-color:#FFF;
+}
+
 
 #footer {
  width:100%;
@@ -29,12 +42,14 @@ body,td,th {
 	font-family: Molengo, Myriad Pro, Myriad Pro Cond, Myriad Pro Light, Garamond, serif;
 }
 body {
-	margin-left: 20%;
+	background-color:#CCC;
+/*	margin-left: 20%;
 	margin-top: 20px;
 	margin-right: 20%;
 	margin-bottom: 20px;
-/*	background-image: url(Images/new_bg.jpg);
+background-image: url(Images/new_bg.jpg);
 	background-repeat: repeat;*/
+	
 }
 a:link {
 	color: #000000;
@@ -72,6 +87,17 @@ a:active {
 }
 .style5 {
 	font-size: 12pt;
+}
+
+.style13
+{
+	padding:5px;
+	padding-left:15px;
+}
+.style14
+{
+	font-size: 12pt;
+	padding-right:20px;
 }
 /*
 .right

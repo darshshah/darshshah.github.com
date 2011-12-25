@@ -7,6 +7,7 @@
 </head>
 
 <body>
+<div id="wrapper">
 <div align="center" id="div0" >
   <p class="style1"><a href="../index.html">Darsh Shah</a></p>
   <p class="style2">Electronics freak, hardware tinkerer, movie buff, android lover and blogger</p>
@@ -23,16 +24,17 @@
 <p align="right" class="style3"><a href="http://blog.darshshah.org/" target="_blank">Blog</a></p>
 <p align="right" class="style3"><a href="../Contact.html">Contact</a> </p></div>
 
-  <div id="div2">  <p class="style5">We made a Real Time Clock in software which is used for doing a task based on the time of the day. RTC chips are available in market and are used in almost every application which needs a real time clock.They precisely calculate the time.</p>
-  <p class="style5">We implemented it using Atmega32 controller. We used timer1 at 8MHz frequency and used switches for time input and LCD for output. In our code, we first ask the user to enter the the time at which the system should start, for how much time to be on, after getting over - after what interval should be restart and how many times per day it should run. The current time is fed to the microcontroller using USART, but switches can also be used.<br />
+  <div id="div2" class="style14">  <p>We made a Real Time Clock in software which is used for doing a task based on the time of the day. RTC chips are available in market and are used in almost every application which needs a real time clock.They precisely calculate the time.</p>
+  <p>We implemented it using Atmega32 controller. We used timer1 at 8MHz frequency and used switches for time input and LCD for output. In our code, we first ask the user to enter the the time at which the system should start, for how much time to be on, after getting over - after what interval should be restart and how many times per day it should run. The current time is fed to the microcontroller using USART, but switches can also be used.<br />
     Finally, the data is displayed on the LCD while the user is pressing the switches and manipulating it. The output is connected to motor, which runs when current time=desired time. </p>
-  <p class="style5">One thing to notice is that using 8MHz freq clock, so even though I am giving interrupt at every 1 sec, an error of approximately 50 seconds per day.<br />
+  <p>One thing to notice is that using 8MHz freq clock, so even though I am giving interrupt at every 1 sec, an error of approximately 50 seconds per day.<br />
     So, we have to add 50 secs to each day. Instead, you can use a external crystal for minimizing the error. </p>
-  <p class="style5">I was in charge of the coding the RTC and helped in hardware testing. </p>
-  <p class="style5">The image below shows the block diagram of the system. </p><p align="left" class="style5"><img src="Images/rtc_block.png" alt="block diagram" width="500" height="400" /></p>
-
+  <p>I was in charge of the coding the RTC and helped in hardware testing. </p>
+  <p>The image below shows the block diagram of the system. </p><p align="left" class="style5"><img src="Images/rtc_block.png" alt="block diagram" width="500" height="400" /></p>
+ </div>
+ <div id="footer">
  <p align="center"><a href="../Projects.html">back</a></p> 
-
+</div>
 </div>
   
 </body>
