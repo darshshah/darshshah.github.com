@@ -4,8 +4,10 @@
 
 #div0 {
  width:100%;
- 
+ padding:10px;
+  
 }
+
 #div1 {
 position:relative;
  top:0;
@@ -19,10 +21,18 @@ position:relative;
   width:75%; 
  
 }
+#wrapper {
+    width: 900px;
+    margin: 0 auto;
+    text-align: left;
+	margin-left: auto; 
+	margin-right: auto;
+	background-color:#FFF;
+}
 
 #tooltip1 { position: relative; }
 #tooltip1 a span { display: none; color: #FFFFFF; }
-#tooltip1 a:hover span { display: block; position: relative; width:auto; background-color:transparent; height:auto; left:auto top:auto; color:#0000CC; padding: 5px; }
+#tooltip1 a:hover span {  display:block; position:absolute; width:auto; text-align:center; background-color:transparent; height:auto; left:auto top:auto; color:#0000CC; padding: 0px; }
  
 #footer {
  width:100%;
@@ -35,10 +45,11 @@ body,td,th {
 	font-family: Molengo, Myriad Pro, Myriad Pro Cond, Myriad Pro Light, Garamond, serif;
 }
 body {
-	margin-left: 20%;
+	/*margin-left: 20%;
 	margin-top: 20px;
 	margin-right: 20%;
-	margin-bottom: 20px;
+	margin-bottom: 20px;*/
+	background-color:#CCC;
 	/*background-image: url(Images/new_bg.jpg);
 	background-repeat: repeat;*/
 }
@@ -120,7 +131,22 @@ a:active {
 .style11 {
 color:#00C;
 	}
+.style12 {
+font-size: 16pt;
+/*text-decoration: none;*/
+color: #CC0000;
 
+}
+
+.style13
+{
+	padding:5px;
+	padding-left:15px;
+}
+.style14
+{
+	padding-right:20px;
+}
 .link1 {
 	color: #CC0000;
 }
