@@ -3,7 +3,8 @@
 @import url(http://fonts.googleapis.com/css?family=Molengo&v1);
 #div0 {
  width:100%;
- padding:10px;
+ padding-left:10px;
+ padding-right:10px;
 }
 #div1 {
 position:relative;
@@ -98,6 +99,13 @@ a:active {
 {
 	font-size: 12pt;
 	padding-right:20px;
+}
+
+.style15
+{
+	font-size: 16pt;
+	padding-right:20px;
+	color:#30F;
 }
 /*
 .right
