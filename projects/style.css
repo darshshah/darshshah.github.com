@@ -1,11 +1,13 @@
 /* CSS Document */
 
-@import url(http://fonts.googleapis.com/css?family=Molengo&v1);
+@import url(http://fonts.googleapis.com/css?family=Ropa+Sans:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=News+Cycle);
+
+
 #div0 {
  width:100%;
- padding-left:10px;
- padding-right:10px;
-}
+ padding:10px;
+ }
 #div1 {
 position:relative;
  top:0;
@@ -40,7 +42,7 @@ display: block;
 }
  
 body,td,th {
-	font-family: Molengo, Myriad Pro, Myriad Pro Cond, Myriad Pro Light, Garamond, serif;
+	font-family: 'News Cycle','Ropa Sans', sans-serif;
 }
 body {
 	background-color:#CCC;
