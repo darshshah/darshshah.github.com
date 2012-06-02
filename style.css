@@ -2,6 +2,7 @@
 
 /*@import url(http://fonts.googleapis.com/css?family=Molengo&v1);
 */
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
 @import url(http://fonts.googleapis.com/css?family=Ropa+Sans:400,400italic);
 @import url(http://fonts.googleapis.com/css?family=News+Cycle);
 
@@ -45,7 +46,7 @@ padding-top: 30px;
 display: block;
 }
 body,td,th {
-font-family: 'News Cycle','Ropa Sans', sans-serif;
+font-family:  'Droid Sans','News Cycle','Ropa Sans', sans-serif;
 }
 body {
 	/*margin-left: 20%;
@@ -69,7 +70,7 @@ a:hover {
 a:active {
 	text-decoration: none;
 	color: #CC0000;
-	font-family: 'News Cycle','Ropa Sans', sans-serif;
+	font-family: 'Droid Sans', 'News Cycle','Ropa Sans', sans-serif;
 }
 
 .style0 {

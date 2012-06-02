@@ -1,5 +1,5 @@
 /* CSS Document */
-
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
 @import url(http://fonts.googleapis.com/css?family=Ropa+Sans:400,400italic);
 @import url(http://fonts.googleapis.com/css?family=News+Cycle);
 
@@ -42,7 +42,7 @@ display: block;
 }
  
 body,td,th {
-	font-family: 'News Cycle','Ropa Sans', sans-serif;
+	font-family:'Droid Sans', 'News Cycle','Ropa Sans', sans-serif;
 }
 body {
 	background-color:#CCC;

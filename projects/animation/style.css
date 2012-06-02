@@ -1,6 +1,7 @@
 /* CSS Document */
-
-@import url(http://fonts.googleapis.com/css?family=Molengo&v1);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+@import url(http://fonts.googleapis.com/css?family=Ropa+Sans:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=News+Cycle);
 
 #div0 {
  width:100%;
@@ -40,7 +41,7 @@ display: block;
 }
  
 body,td,th {
-	font-family: Molengo, Myriad Pro, Myriad Pro Cond, Myriad Pro Light, Garamond, serif;
+	font-family:'Droid Sans', 'News Cycle','Ropa Sans', sans-serif;;
 }
 body {
 	/*margin-left: 20%;
