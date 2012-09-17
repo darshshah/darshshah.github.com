@@ -71,7 +71,7 @@ a:hover {
 a:active {
 	text-decoration: none;
 	color: #CC0000;
-	font-family:  'Yanone Kaffeesatz','Droid Sans', 'News Cycle','Ropa Sans', sans-serif;
+	font-family:  'Droid Sans', 'News Cycle','Ropa Sans', sans-serif;
 }
 
 .style0 {
@@ -81,16 +81,13 @@ a:active {
 }
 
 .style1 {
-	font: Yanone Kaffeesatz;
-	font-weight:400;	
+	
 	font-size: 36pt;
 	margin: 0px;
 	padding: 0px;
 	color:#000000;
 }
 .style2 {
-	font: Yanone Kaffeesatz;
-	font-weight:300;
 	font-size: 14pt;
 	margin: 0px;
 	padding: 0px;
