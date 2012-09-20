@@ -1,0 +1,20 @@
+<table width="675" border="0" class="style9">
+    <tr>
+    <td width="167" height="124"><p align="center"><img src="Images/minipro.jpg" alt="minipro" width="112" height="84"></p>
+      <p align="center" class="style8"><a href="projects/animation/birthday gift.html">The surprise birthday gift</a></p></td>
+      <td width="164" height="124"><p align="center"><img src="Images/punch.jpg" alt="punch" width="112" height="84"></p>
+      <p align="center" class="style8"><a href="projects/animation/punch.html">Stickman Punch</a></p></td>
+      <td width="164" height="124"><p align="center"><img src="Images/jump.jpg" alt="jump" width="112" height="84"></p>
+      <p align="center" class="style8"><a href="projects/animation/jump.html">Jump</a></p></td>
+    
+      <td width="162" height="124"><p align="center"><img src="Images/weightlift.jpg" alt="weightlift" width="112" height="84"></p>
+      <p align="center" class="style8"><a href="projects/animation/weightlift.html">Weightlifting</a> </p></td>
+    </tr>
+      <tr>
+      <td width="167" height="124"><p align="center"><img src="Images/walk.jpg" alt="Walk" width="112" height="84"></p>
+      <p align="center" class="style8"><a href="projects/animation/walk.html"> Stickman Walk </a></p></td>
+      
+      <td width="164" height="124"><p align="center"><img src="Images/whip.jpg" alt="whip" width="112" height="84"></p>
+      <p align="center" class="style8"><a href="projects/animation/whip.html">Whip</a></p></td>
+    </tr>    
+        </table>
