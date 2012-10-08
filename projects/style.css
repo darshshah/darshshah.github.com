@@ -18,13 +18,12 @@ position:relative;
 #div2 {
  position:relative;
   float:right;
- top:8px;
- width:75%;
+width:75%;
 
  
 }
 #wrapper {
-    width: 900px;
+    width: 80%;
     margin: 0 auto;
     text-align: left;
 	margin-left: auto; 
@@ -54,6 +53,9 @@ background-image: url(Images/new_bg.jpg);
 	background-repeat: repeat;*/
 	
 }
+html{
+	overflow-y: scroll;
+}
 a:link {
 	color: #000000;
 	text-decoration: none;
@@ -71,7 +73,7 @@ a:active {
 	color: #CC0000;
 }
 .style1 {
-	font-size: 36pt;
+	font-size: 32pt;
 	margin: 0px;
 	padding: 0px;
 }
