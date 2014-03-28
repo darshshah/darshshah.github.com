@@ -19,9 +19,9 @@
 	<link href="navbar-fixed-top.css" rel="stylesheet">
 
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<script type="text/javascript" src="css/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="moment.js"></script>
-	<script type="text/javascript" src="datetimepicker.js"></script>
+	<script type="text/javascript" src="bootstrap-datetimepicker.js"></script>
   </head>
 
   <body>
@@ -50,32 +50,128 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
-
-	<div class="container">
-
-  <div class="container">
-  <h2> Add an Event !</h2>
-    <div class="row">
-        <div class='col-sm-6'>
-            <div class="form-group">
-                <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
-            </div>
-        </div>
-        <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker1').datetimepicker();
-            });
-        </script>
-    </div>
+<div class="container">
+<form role="form">
+<div class="row">
+<h3 class="text-center"> Add an Event !</h3>
+</div>
+<div class="row">
+<div class="col-md-4">
+  <div class="container1">
+      
+	<div class="form-group">
+		<div class="row">
+			<div class="col-md-8">
+				<h4>Date:</h4>
+				<input type="date" class="form-control" id="date" required autofocus>		
+			</div>
+		</div>
+	<br>
+	<br>
+		<div class="row ">
+			<div class="col-md-4">
+				<h4>From:</h4>
+				<input type="time" class="form-control" id="starttime" required>
+			</div>
+		
+			<div class="col-md-4">
+				<h4>To:</h4>
+				<input type="time" class="form-control" id="endtime" required>
+			</div>
+		</div>
+		
+	<br>
+	<br>
+		<div class="row">
+			<div class="col-md-8">
+				<h4>Event Name:</h4>
+				<input type="text" class="form-control" id="etitle" required>
+			</div>
+		</div>
+	<br>
+	<br>
+		<div class="row">
+			<div class="col-md-8">
+				<h4>Event Info:</h4>
+				<textarea class="form-control" rows="6" id="info" required></textarea>
+			</div>
+		</div>
+	<br>
+	
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-md-4">
+	<div class="container1">
+		<div class="form-group">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-4">
+				
+					<h4>Add People:</h4>
+					<p class="help-block">Press control and select multiple people</p>
+					<select multiple class="form-control" >
+					<option>Darsh</option>
+					<option>Andrew</option>
+					<option>Carnegie</option>
+					<option>Obama</option>
+					<option>Chuck Norris</option>
+					</select>
+				</div>
+			</div>
+	
+	<br>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-4">
+					<h4>Add Groups:</h4>
+					<p class="help-block">Press control and select multiple people</p>
+					<select multiple class="form-control" >
+					<option>SEN Group</option>
+					<option>DS Group</option>
+					<option>CloudComputing</option>
+					<option>DOTA</option>
+					<option>FIFA</option>
+					</select>
+				</div>
+			</div>
+		<br>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-4">
+					<h4>Add Files:</h4>
+					<p class="help-block">Add files to share with the Event</p>
+						<table class="table table-hover">
+							  <thead>
+									<tr>
+									  <th>#</th>
+									  <th>File Name</th>
+									 </tr>
+								  </thead>
+								  <tbody>
+									<tr>
+									  <td>1</td>
+									  <td>Group23.pdf</td>
+									</tr>
+									</tbody>
+								</table>
+					<div class="form-group">
+						<label for="exampleInputFile">File input</label>
+						<input type="file" id="exampleInputFile">	
+					  </div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
 </div>
 
-    </div> <!-- /container -->
-
-
+	<div class="row">
+			<div class="col-md-3 col-md-offset-5">
+				<button type="submit" class="btn btn-success">Create Event </button>
+			</div>
+	</div>
+	</form>
+</div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
