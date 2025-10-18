@@ -5,6 +5,7 @@ description: >-
   Staff Engineer at Apple. Focusing on distributed systems, machine learning, and scalable infrastructure.
 baseurl: ""
 url: "https://darshshah.github.io"
+domain: darshshah.github.io
 
 # Build settings
 markdown: kramdown
