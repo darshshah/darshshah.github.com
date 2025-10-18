@@ -1,0 +1,45 @@
+---
+layout: default
+title: Blog
+---
+
+<header class="header blog-header">
+    <div class="blog-header-text">
+        <h1 class="blog-title">Darsh's Blog</h1>
+        <p class="blog-subtitle">Thoughts on technology and me</p>
+    </div>
+    <a href="{{ '/' | relative_url }}" class="contact-btn">
+        <i class="fas fa-home"></i>
+        Home
+    </a>
+</header>
+
+<section class="section">
+    <div class="blog-list">
+        {% for post in site.posts %}
+        <a href="{{ post.url | relative_url }}" class="blog-card">
+            <h2>{{ post.title }}</h2>
+            <div class="post-meta">
+                <time datetime="{{ post.date | date_to_xmlschema }}">
+                    {{ post.date | date: "%B %d, %Y" }}
+                </time>
+            </div>
+            {% if post.excerpt %}
+            <div class="post-excerpt">
+                {{ post.excerpt | strip_html | truncatewords: 30 }}
+            </div>
+            {% endif %}
+        </a>
+        {% endfor %}
+
+        {% if site.posts.size == 0 %}
+        <div class="content">
+            <p>No blog posts yet. Check back soon!</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2025 Darsh Shah. All rights reserved.</p>
+</footer>

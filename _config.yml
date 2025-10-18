@@ -1,0 +1,36 @@
+# Site settings
+title: Darsh Shah
+email: darsh@darshshah.org
+description: >-
+  Staff Engineer at Apple. Focusing on distributed systems, machine learning, and scalable infrastructure.
+baseurl: ""
+url: "https://darshshah.github.io"
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - old_site/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

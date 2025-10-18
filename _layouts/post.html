@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<article class="post">
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <div class="post-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}">
+                {{ page.date | date: "%B %d, %Y" }}
+            </time>
+        </div>
+    </header>
+
+    <div class="post-content">
+        {{ content }}
+    </div>
+
+    {% if page.tags %}
+    <div class="post-tags">
+        {% for tag in page.tags %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <footer class="post-footer">
+        <a href="{{ '/blog/' | relative_url }}" class="back-to-blog">
+            ← View All Posts
+        </a>
+    </footer>
+</article>
+
+<footer class="footer">
+    <p>&copy; 2025 Darsh Shah. All rights reserved.</p>
+</footer>

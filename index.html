@@ -1,324 +1,44 @@
-    <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
-<head>
-    <title>Darsh Shah</title>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal website">
-    <meta name="author" content="3rd Wave Media">    
-    <link rel="shortcut icon" href="favicon.ico">  
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
-    <!-- github acitivity css -->
-    <link rel="stylesheet" href="assets/plugins/github-activity/dist/github-activity-0.1.0.min.css">
-    <link rel="stylesheet" href="assets/plugins/github-activity/dist/octicons/octions.min.css">
-    
-    
-    <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    
-</head> 
+---
+layout: home
+title: Darsh Shah - Software Engineer
+---
 
-<body>
-    <!-- ******HEADER****** --> 
-    <header class="header">
-        <div class="container">                       
-            <img class=" img-circle profile-image img-responsive pull-left" height="200px" width="200px" src="assets/images/darsh_shah.jpg" alt="Darsh Shah" />
-            <div class="profile-content pull-left">
-                <h1 class="name">Darsh Shah</h1>
-                <h2 class="desc">Software Engineer at Apple</h2>   
-                <ul class="social list-inline">
-                    <li><a href="https://twitter.com/darsh_shah"><i class="fa fa-twitter"></i></a></li>                   
-                    <li><a href="http://www.linkedin.com/in/darshs"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="https://github.com/darshshah/"><i class="fa fa-github"></i></a></li>                  
-                    <li><a href="http://blog.darshshah.org/"><i class="fa fa-rss"></i></a></li>             
-                    <li class="last-item"><a href="assets/docs/Darsh_Shah_Resume.pdf"><i class="fa fa-file-pdf-o"></i></a></li>    
+<!-- About Section -->
+<section class="section">
+    <h2 class="section-title">About Me</h2>
+    <div class="content">
+        <p>I'm a Staff Engineer at Apple, working on enterprise solutions for businesses and schools. I got to present at WWDC 2023 about new products we're building for enterprise customers. The talk is called "Do more with Managed Apple IDs" and you can watch it <a href="https://developer.apple.com/videos/play/wwdc2023/10254" target="_blank" class="link">here</a>.</p>
 
-                </ul> 
-            </div><!--//profile-->
-            <a class="btn btn-cta-primary pull-right" href="mailto:darshshah11@gmail.com"><i class="fa fa-paper-plane"></i> Contact Me</a>              
-        </div><!--//container-->
-    </header><!--//header-->
-    
-    <div class="container sections-wrapper">
-        <div class="row">
-            <div class="primary">
-                <section class="about section">
-                    <div class="section-inner">
-                        <h2 class="heading">About Me</h2>
-                        <div class="content">
-                            <p> I am a senior software engineer at Apple in the Services org. 
-                                <br><br>
+        <p>Before Apple, I was on the Search Relevancy team at Salesforce, working on personalization for Einstein Search. I built features and services for A/B testing to improve search ranking. Before that, I helped create and deploy a distributed system to manage thousands of search servers.</p>
 
-                                In my previous role, I worked as a machine learning engineer in the Search Relevancy team at Salesforce. I developed and tested features and services that enabled search relevance experimentations aimed at improving overall search ranking for Salesforce customers. Before that, I worked in search infrastructure team where I partly created and deployed a distributed system to manage thousands of search servers.
-                           <br><br>
+        <p>I did my MS in Information Networking at Carnegie Mellon, focusing on Distributed Systems. I'm fascinated by how large-scale distributed systems are built and how they achieve scalability, caching, and fault-tolerance. I also have a certificate in Big Data from University of Washington.</p>
 
-                            I pursed my MS in Information Networking at Carnegie Mellon University. My focus of study was Distributed Systems. I am interested in understanding how current large-scale distributed systems are built and how to achieve scalability, caching and fault-tolerance in distributed systems. I have also have a certificate in Big Data technologies from University of Washington.</p>
+        <p>In a previous life, I was a <a href="/hardware.pdf" target="_blank" class="link">hardware tinkerer</a>.</p>
+    </div>
+</section>
 
-                            <p>In my previous incarnation, I was a <a href="assets/docs/ePortfolio.pdf" > hardware tinkerer. </a></p>
-                         
-                        </div><!--//content-->
-                    </div><!--//section-inner-->                 
-                </section><!--//section-->
+<!-- Recent Blog Posts Section -->
+<section class="section">
+    <h2 class="section-title">Recent Posts</h2>
+    <div class="recent-posts">
+        {% for post in site.posts limit:3 %}
+        <a href="{{ post.url | relative_url }}" class="recent-post-card">
+            <h3 class="recent-post-title">{{ post.title }}</h3>
+            <time class="recent-post-date" datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%B %d, %Y" }}
+            </time>
+            {% if post.excerpt %}
+            <p class="recent-post-excerpt">
+                {{ post.excerpt | strip_html | truncatewords: 25 }}
+            </p>
+            {% endif %}
+        </a>
+        {% endfor %}
 
-                 <section class="skills aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">Tools and Technologies</h2>
-                        <div class="content">
-                            <p class="intro">
-                               List of major tools and technologies I have used so far</p>
-                            
-                            <div class="skillset">
-
-                                <div class="item">
-                                    <h3 class="level-title">Java<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Use Java in my day to day work">Proficient</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="95%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                               
-                                <div class="item">
-                                    <h3 class="level-title">Python &amp; Django<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Use Python in my day to day work">Proficient</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="95%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                                
-                                <div class="item">
-                                    <h3 class="level-title">HTML5/CSS3/JS<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Used JavaScript for frontend dev">Intermediate</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="80%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                               
-                                
-                                <div class="item">
-                                    <h3 class="level-title">C<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Used C during my previous work ex and internship">Intermediate</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="80%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                               
-                            </div>   
-                            <p class="intro">
-                               I have also worked with Docker, Jupyter, Splunk, MySQL, HBase, Hadoop, Hive, Kafka, Zookeeper, Android &amp; Shell Scripting</p>
-
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </section><!--//section-->
-                
-           <!--     <section class="experience section">
-                    <div class="section-inner">
-                        <h2 class="heading">Previous Work Experience</h2>
-                        <div class="content">
-                            <div class="item">
-                                <h3 class="title">Graduate Teaching Assistant - <span class="place"><a href="http://www.cmu.edu/">Carnegie Mellon University</a></span> <span class="year">(2014 - 2015)</span></h3>
-                                <p>Teaching Assistant for ECE graduate level 18-641 Java for Smartphone Development course. Helping students in understanding the concepts of Java including design patterns and concurrency, Java Servlets/JSP and Android Programming.</p>
-                            </div>
-                            <div class="item">
-                                <h3 class="title">System Software Intern - <span class="place"><a href="http://www.apple.com/">Apple Inc.</a></span> <span class="year">(2014)</span></h3>
-                                <p>In the EFI(Firmware team), I was responsible for making infrastructure libraries to support diagnostics on production line. Implemented software solution which helped in increasing UPH (units/hr) during production</p>
-                            </div>
-                            
-                            <div class="item">
-                                <h3 class="title"> Associate Engineer - <span class="place"><a href="https://www.qualcomm.com/">Qualcomm India</a></span> <span class="year">(2012 - 2013)</span></h3>
-                                <p>Worked on FastCV, a computer vision library by Qualcomm. Wrote APIs in C and automation in Matlab and Perl to test Vuforia Augmented Reality App</p>
-                            </div>
-                            <p><a class="more-link" href="http://www.linkedin.com/in/darshs" target="_blank"><i class="fa fa-external-link"></i> More information on LinkedIn</a></p>
-                        </div>  
-                    </div>            
-                </section>
-
-                <section class="projects section">
-                    <div class="section-inner">
-                        <h2 class="heading">Projects</h2>
-                        <div class="content">
-                            <div class="item">
-                                <h3 class="title">Ywitter</h3>
-                                <p class="summary"> Made a social network where people can add post, can add comments to posts and can follow/unfollow other people. Used HTML5/CSS3/JavaScript/jQuery for frontend. Django and Postgresql for backend. The application is hosted on Heroku. </p>
-                                <p><a class="more-link" href="http://warm-tor-9160.herokuapp.com/" target="_blank"><i class="fa fa-external-link"></i> Website</a></p>
-                            </div>
-                            <div class="item">
-                                <h3 class="title">Pittsburgh Transit Simulator</h3>
-                                <p class="summary"> Made a Transit simulator application in Java which can simulate riders and buses in the City of Pittsburgh. The application can calculate delays by simulating rider density, weather conditions, different type of riders (wheelchair/luggage/group), payments methods (card/rfid/cash), type of buses and traffic for one whole day of operation. </p>
-                               
-                            </div>
-                            <div class="item">
-                                <h3 class="title">Spacer</h3>
-      
-                                <p class="summary"> Was a part of the team that made the website for Spacer, a startup idea in <a href="http://www.hackastartup.com/" target="_blank">Hack-a-Startup</a> competition organized by Tepper School of Business, CMU. I worked on the frontend and used HTML5/CSS3/JavaScript</p>
-                                <p><a class="more-link" href="http://wenzhuliu.com/hack/index.html" target="_blank"><i class="fa fa-external-link"></i> Website</a></p>
-                            </div>
-
-                             <div class="item">
-                                <h3 class="title">Port Authority Realtime Application</h3>
-                               <p class="summary"> Was a part of the team that created a web application which showed the realtime bus tracking information for Port Authority. It was a part of <a href="http://tartanhacks.com/" target="_blank">TartanHacks</a> hackathon at CMU. I worked on the realtime API and backend part in Django. </p>
-                               
-                            </div>
-
-                            <div class="item">
-                                <h3 class="title">Scrabble with stuff</h3>
-                               <p class="summary"> Create a scrabble game in Java and implemented the GUI using Swing. The scrabble game has special invisible tiles that activate when a player plays a normal tile on it.  </p>
-                               
-                            </div>
-
-                            <div class="item">
-                                <h3 class="title">Search Engine Algorithms</h3>
-                               <p class="summary"> Implemented a Boolean retrieval algorithm that evaluate queries and ranks documents based on Lucene. Implemented BM25 and Indri ranking along with query expansion to achieve better accuracy. </p>
-                               
-                            </div>
-
-                             <div class="item">
-                                <h3 class="title">Input Text Predictor</h3>
-                               <p class="summary"> Built an input text predictor, similar to Google instant, by generating a statistical language model on a list of n-grams generated from a text corpus using Hadoop Map Reduce in Java.</p>
-                               
-                            </div>
-
-                             <div class="item">
-                                <h3 class="title">FitPlay: A Gamified Social Fitness App</h3>
-                               <p class="summary"> Developed an android app which motivates people to do exercise using concepts of gamification. The app's backend service was hosted on AWS EC2. </p>
-                               
-                            </div>
-
-                            
-                         <p><a class="more-link" href="http://www.linkedin.com/in/darshs" target="_blank"><i class="fa fa-external-link"></i> More information on LinkedIn</a></p>
-                        </div>//content-->  
-                    </div><!--//section-inner-->                 
-               <!--//section-->
-            
-            
-            <!--<div class="secondary col-md-4 col-sm-12 col-xs-12">
-                 <aside class="info aside section">
-                    <div class="section-inner">
-                        <h2 class="heading sr-only">Basic Information</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span>San Francisco, USA</li>
-                                <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a href="mailto:darshshah11@gmail.com">darshshah11@gmail.com</a></li>
-                                <li><i class="fa fa-link"></i><span class="sr-only">Website:</span><a href="http://darshshah.org" target="_blank">darshshah.org</a></li>
-                            </ul>
-                        </div>
-                    </div>               
-                </aside>
-                -->
-               
-                
-                <section class="education aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">Education</h2>
-                        <div class="content">
-                            <div class="item">                      
-                                <h3 class="title"><i class="fa fa-graduation-cap"></i> Certificate in Big Data Technologies</h3>
-                                <h4 class="university">University of Washington, USA <span class="year">(2016-2017)</span></h4>
-                            </div><!--//item-->
-                            <div class="item">                      
-                                <h3 class="title"><i class="fa fa-graduation-cap"></i> MS Information Networking</h3>
-                                <h4 class="university">Carnegie Mellon University, USA <span class="year">(2013-2015)</span></h4>
-                            </div><!--//item-->
-                            <div class="item">
-                                <h3 class="title"><i class="fa fa-graduation-cap"></i> B.Tech Info &amp; Comm Technology</h3>
-                                <h4 class="university">DA-IICT, India <span class="year">(2008-2012)</span></h4>
-                            </div><!--//item-->
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </section><!--//section-->
-
-                 <!--
-                 <aside class="courses aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">Coursework at CMU</h2>
-                        <div class="content">
-                            <div class="item">                      
-                                <h3 class="title"><i class="fa fa-dot-circle-o"></i> Engineering Distributed Systems</h3>
-                                <h4 class="info">Worked on Coda File System </h4>
-                            </div>
-                            <div class="item">
-                                <h3 class="title"><i class="fa fa-dot-circle-o"></i> Cloud Computing</h3>
-                                <h4 class="info">Used Hadoop/Hbase/MySQL</span></h4>
-                                </div>
-                            <div class="item">
-                                <h3 class="title"><i class="fa fa-dot-circle-o"></i> Search Engines</h3>
-                                <h4 class="info">Indri/BM25 algorithm implementation</span></h4>
-                            </div>
-                            <div class="item">
-                                <h3 class="title"><i class="fa fa-dot-circle-o"></i> Internet Services</h3>
-                                <h4 class="info">Systems research paper discussions</span></h4>
-                            </div>
-                            <div class="item">
-                                <h3 class="title"><i class="fa fa-dot-circle-o"></i> Web App Dev</h3>
-                                <h4 class="info">Django and Python to create websites</span></h4>
-                            </div>
-                            <div class="item">
-                                <h3 class="title"><i class="fa fa-dot-circle-o"></i> Real Time Embedded Systems</h3>
-                                <h4 class="info">Kernel programming and android dev on Nexus7</span></h4>
-                            </div>
-
-                        </div>
-                    </div>
-                </aside>-->
-
-                            
-                <section class="Volunteering aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">Volunteering</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li class="item">
-                                    <span class="title"><a href="https://hackbrightacademy.com/" target="_blank">Hackbright Academy Mentor</span></a><span class="level"> Encouraging women in tech</span>
-                                </li><!--//item-->
-                                 <li class="item">
-                                   <span class="title"><a href="https://foodlifeline.org/" target="_blank">Food Lifeline</span></a><span class="level"> Solving hunger crisis</span>
-                                </li><!--//item-->
-                            </ul>
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </section><!--//section-->
-                
-                <section class="credits aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">Credits</h2>
-                        <div class="content">
-                             <p>UX designer <a href="https://www.linkedin.com/in/xiaoying" target="_blank">Xiaoying Riley</a> at <a href="http://themes.3rdwavemedia.com/" target="_blank">3rd Wave Media</a> for this awesome Responsive HTML5 CSS3 site template.</p>
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </section><!--//section-->
-              
-            </div><!--//secondary-->    
-        </div><!--//row-->
-
-    
-    <!-- ******FOOTER****** --> 
-    <footer class="footer">
-        
-    </footer><!--//footer-->
- 
-    <!-- Javascript -->          
-    <script type="text/javascript" src="assets/plugins/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>    
-    <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script> 
-    <!-- github activity plugin -->
-    <script type="text/javascript" src="assets/plugins/github-activity/dist/mustache/mustache.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/github-activity/dist/github-activity-0.1.0.min.js"></script>
-    <!-- custom js -->
-    <script type="text/javascript" src="assets/js/main.js"></script>            
-</body>
-</html> 
-
+        {% if site.posts.size > 3 %}
+        <a href="{{ '/blog/' | relative_url }}" class="view-all-link">
+            View all posts →
+        </a>
+        {% endif %}
+    </div>
+</section>
