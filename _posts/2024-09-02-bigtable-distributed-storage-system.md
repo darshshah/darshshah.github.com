@@ -4,9 +4,10 @@ title: "Bigtable: Google's Distributed Storage System for Structured Data"
 date: 2024-09-02
 author: Darsh Shah
 tags: [distributed-systems, storage, google, databases, nosql, bigtable]
+excerpt: "Bigtable is Google's sparse, distributed, multi-dimensional sorted map designed to scale to petabytes of data across thousands of machines. Rather than building a traditional RDBMS, Google created a system organized around rows, column families, and timestamps -- built atop GFS and Chubby -- that powers critical services like Google Analytics, Google Earth, and web crawling infrastructure."
 ---
 
-# Bigtable: Google's Distributed Storage System for Structured Data
+*This post is adapted from a paper review I wrote during CMU's 18-845: Internet Services course, where we studied seminal papers in distributed systems, web architecture, and virtualization. I've converted my reviews into blog posts to share them more broadly.*
 
 > **Paper:** *"Bigtable: A Distributed Storage System for Structured Data"* by Fay Chang, Jeffrey Dean, Sanjay Ghemawat, et al. (OSDI, 2006)
 
@@ -39,7 +40,3 @@ Many internal clients at Google, including Google Analytics, Google Earth, and t
 - HBase, the open-source counterpart to Bigtable, is a columnar store where all columns are stored together in memory, enabling fast aggregation and counting queries. Is it possible to achieve similar performance for aggregation workloads in Bigtable?
 - What happens when a master goes down? Is there a standby replica of the master, or does the entire Bigtable instance go out of service during failover?
 - In the evaluation section, the authors should have addressed latency and end-to-end performance for systems using Bigtable. Rather than focusing on the number of tablets required, actual read/write throughput and latency statistics would have been more informative.
-
----
-
-*This review was written as part of CMU's 18-845: Internet Services course.*

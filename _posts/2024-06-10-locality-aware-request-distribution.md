@@ -4,9 +4,10 @@ title: "Locality-Aware Request Distribution in Cluster-Based Web Servers"
 date: 2024-06-10
 author: Darsh Shah
 tags: [load-balancing, web-servers, clustering, caching, distributed-systems]
+excerpt: "These two papers tackle the problem of intelligently distributing requests across web server clusters. The first introduces LARD, which routes requests to maximize backend cache locality while maintaining load balance. The second paper identifies LARD's scalability limitations and proposes a new architecture where a simple layer-4 switch handles distribution and backends themselves forward requests to peers based on content, achieving significantly better scalability."
 ---
 
-# Locality-Aware Request Distribution in Cluster-Based Web Servers
+*This post is adapted from a paper review I wrote during CMU's 18-845: Internet Services course, where we studied seminal papers in distributed systems, web architecture, and virtualization. I've converted my reviews into blog posts to share them more broadly.*
 
 > **Paper [1]:** *"Locality-Aware Request Distribution in Cluster-Based Network Services"* by V. Pai et al. (ASPLOS, 1998)
 >
@@ -41,7 +42,3 @@ The second paper identifies the drawbacks and limitations of LARD and proposes a
 - The testing data in the first paper should have been more comprehensive. The authors only use a Rice University trace for testing. It would be interesting to see results across different workloads -- small files, very large files, and dynamic content that takes a long time to generate.
 - In the second paper, Figures 2 and 3 show the splicing front-end using persistent connections, while the TCP handoff data (taken from the first paper) uses HTTP 1.0. It is unclear whether these data points can be directly compared. The authors do not mention re-running the TCP handoff experiments with persistent connections.
 - The second paper uses a software switch implementing WRR. It would be interesting to see whether a hardware switch can deliver the same performance. Ideally, the authors should have compared software versus hardware switch results, since their entire argument relies on using switches to make clustering efficient.
-
----
-
-*This review was written as part of CMU's 18-845: Internet Services course.*

@@ -4,9 +4,10 @@ title: "Percolator: Large-Scale Incremental Processing at Google"
 date: 2024-09-23
 author: Darsh Shah
 tags: [distributed-systems, google, incremental-processing, transactions, bigtable, search-indexing]
+excerpt: "Percolator is Google's system for incrementally processing updates to massive datasets, built on top of Bigtable to replace batch-oriented MapReduce pipelines for web search indexing. By providing ACID snapshot-isolation transactions and an observer-based notification mechanism, Percolator reduced the median document indexing latency by over 100x compared to the previous MapReduce-based system."
 ---
 
-# Percolator: Large-Scale Incremental Processing at Google
+*This post is adapted from a paper review I wrote during CMU's 18-845: Internet Services course, where we studied seminal papers in distributed systems, web architecture, and virtualization. I've converted my reviews into blog posts to share them more broadly.*
 
 > **Paper:** *"Large-scale Incremental Processing Using Distributed Transactions and Notifications"* by Daniel Peng and Frank Dabek (OSDI, 2010)
 
@@ -39,7 +40,3 @@ Percolator is significantly faster than MapReduce for this workload. Under the p
 - Timestamps are assigned in strictly increasing order. Is it possible to exhaust the timestamp space under very high request rates? What is the timestamp format and its practical range?
 - Is the additional computational overhead required by Percolator justified by the reduction in average document age?
 - Since there is no global deadlock detector, how frequently do deadlocks occur in practice? How are deadlocks resolved -- are the involved processes simply killed?
-
----
-
-*This review was written as part of CMU's 18-845: Internet Services course.*

@@ -4,9 +4,10 @@ title: "The End-to-End Design Principle: Placing Functions in the Right Layer"
 date: 2024-01-15
 author: Darsh Shah
 tags: [networking, systems-design, end-to-end-argument, design-principles, distributed-systems]
+excerpt: "This foundational paper argues that functions placed at low levels of a system may be redundant or of little value when compared to the cost of providing them at that level. Instead, many functions -- such as reliable delivery, encryption, and duplicate suppression -- are best implemented at the application endpoints, making the end-to-end argument one of the most influential design principles in networked systems."
 ---
 
-# The End-to-End Design Principle: Placing Functions in the Right Layer
+*This post is adapted from a paper review I wrote during CMU's 18-845: Internet Services course, where we studied seminal papers in distributed systems, web architecture, and virtualization. I've converted my reviews into blog posts to share them more broadly.*
 
 > **Paper:** *"End-to-End Arguments in System Design"* by J.H. Saltzer, D.P. Reed, and D.D. Clark (ACM Transactions on Computer Systems, 1984)
 
@@ -39,7 +40,3 @@ The authors then provide several examples to support the end-to-end argument, in
 - Other examples of this argument include serial communication using checksums, page faults during memory transfers, and subway ticketing systems (you pay when entering the station rather than on each train, allowing multiple connections without repaying -- the collection burden is pushed to the upper layer).
 - What mechanism could be used for encryption that simultaneously supports application-level authentication and protection?
 - Does the end-to-end argument still hold after more than 30 years, or have faster processors and higher-speed networks invalidated its core claims?
-
----
-
-*This review was written as part of CMU's 18-845: Internet Services course.*

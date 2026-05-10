@@ -4,9 +4,10 @@ title: "Measuring Web Server Capacity Under Realistic Conditions"
 date: 2024-04-29
 author: Darsh Shah
 tags: [web-servers, benchmarking, performance, networking]
+excerpt: "This paper exposes critical shortcomings in how web server benchmarks were designed in the late 1990s -- they failed to push servers past their capacity and ignored the effects of WAN delays and packet losses. The authors propose a new benchmarking strategy using S-Clients and a WAN-modeling router, demonstrating that real-world server performance is significantly lower than what existing benchmarks suggested."
 ---
 
-# Measuring Web Server Capacity Under Realistic Conditions
+*This post is adapted from a paper review I wrote during CMU's 18-845: Internet Services course, where we studied seminal papers in distributed systems, web architecture, and virtualization. I've converted my reviews into blog posts to share them more broadly.*
 
 > **Paper:** *"Measuring the Capacity of a Web Server under Realistic Loads"* by G. Banga and P. Druschel (World Wide Web Journal, 1999)
 
@@ -39,7 +40,3 @@ The authors propose a new strategy that addresses these problems by using S-Clie
 - What happens when the client aborts an incomplete connection in the SYN-RCVD state at the server, but the server's SYN-ACK has not yet reached the client?
 - It would have been interesting to observe the effect of WAN delays on a multi-process Zeus server -- whether it behaves similarly to Apache or not.
 - How does this research from 1999 relate to modern web server testing? Are these conditions still relevant in today's web server environments?
-
----
-
-*This review was written as part of CMU's 18-845: Internet Services course.*

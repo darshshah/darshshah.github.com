@@ -4,9 +4,10 @@ title: "Chubby: Google's Distributed Lock Service for Loosely-Coupled Systems"
 date: 2024-08-12
 author: Darsh Shah
 tags: [distributed-systems, locking, google, consensus, paxos, fault-tolerance]
+excerpt: "Chubby is Google's distributed lock service that provides coarse-grained locking and reliable low-volume storage for loosely-coupled distributed systems. Rather than exposing a raw Paxos library to developers, Chubby offers a familiar file-system-like interface with advisory locks, prioritizing availability and reliability over raw performance -- and it has become a foundational building block for many Google infrastructure services."
 ---
 
-# Chubby: Google's Distributed Lock Service for Loosely-Coupled Systems
+*This post is adapted from a paper review I wrote during CMU's 18-845: Internet Services course, where we studied seminal papers in distributed systems, web architecture, and virtualization. I've converted my reviews into blog posts to share them more broadly.*
 
 > **Paper:** *"The Chubby Lock Service for Loosely-Coupled Distributed Systems"* by Mike Burrows (OSDI, 2006)
 
@@ -37,7 +38,3 @@ The paper describes Google's Chubby lock service, which provides coarse-grained 
 - With so many clients connected to a single Chubby cell, how does the system ensure that a single misbehaving client cannot bring the entire system down?
 - Is Chubby used more as a name service than for distributed locking? Can it scale effectively in that use case?
 - What are the key differences between Apache ZooKeeper and Chubby? Could ZooKeeper serve as a drop-in replacement for Chubby?
-
----
-
-*This review was written as part of CMU's 18-845: Internet Services course.*

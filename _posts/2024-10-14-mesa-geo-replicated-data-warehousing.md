@@ -4,9 +4,10 @@ title: "Mesa: Google's Geo-Replicated, Near Real-Time Data Warehousing System"
 date: 2024-10-14
 author: Darsh Shah
 tags: [distributed-systems, google, data-warehousing, geo-replication, advertising, analytics]
+excerpt: "Mesa is Google's distributed data warehousing system designed for storing and querying critical advertising metrics. It achieves a unique combination of geo-replication across multiple datacenters, near real-time update ingestion, strong consistency, and high availability -- occupying a design space between traditional RDBMS and NoSQL systems by restricting updates to batched, controlled operations."
 ---
 
-# Mesa: Google's Geo-Replicated, Near Real-Time Data Warehousing System
+*This post is adapted from a paper review I wrote during CMU's 18-845: Internet Services course, where we studied seminal papers in distributed systems, web architecture, and virtualization. I've converted my reviews into blog posts to share them more broadly.*
 
 > **Paper:** *"Mesa: Geo-Replicated, Near Real-Time, Scalable Data Warehousing"* by Ashish Gupta, Fan Yang, Jason Govig, et al. (VLDB, 2014)
 
@@ -39,7 +40,3 @@ Mesa builds upon Google infrastructure components including Colossus, Bigtable, 
 - How does the query server decide which tables to cache at startup? Does it use a hashing or modulo function for this selection?
 - What is the latency overhead introduced by per-instance verification, as well as the online and offline data verification processes?
 - Where is the versions database stored? Is it in Bigtable? The paper states that it is replicated and uses Paxos, but how does the versioning mechanism itself work?
-
----
-
-*This review was written as part of CMU's 18-845: Internet Services course.*

@@ -4,9 +4,10 @@ title: "The Birth of Google: Search Architecture and PageRank"
 date: 2024-05-20
 author: Darsh Shah
 tags: [search-engines, pagerank, web-crawling, information-retrieval, google]
+excerpt: "These two foundational papers introduce the Google search engine and its core ranking algorithm, PageRank. The first paper describes Google's system architecture -- how web pages are crawled, indexed, and stored -- while the second dives deep into the PageRank algorithm itself. Together, they laid the groundwork for what became the dominant search engine on the web."
 ---
 
-# The Birth of Google: Search Architecture and PageRank
+*This post is adapted from a paper review I wrote during CMU's 18-845: Internet Services course, where we studied seminal papers in distributed systems, web architecture, and virtualization. I've converted my reviews into blog posts to share them more broadly.*
 
 > **Paper [1]:** *"The Anatomy of a Large-Scale Hypertextual Web Search Engine"* by Sergey Brin and Larry Page (WWW Conference, 1998)
 >
@@ -40,7 +41,3 @@ Both papers provide an introduction to the Google search engine and its underlyi
 - It would have been interesting to see how query expansion would fit into their search algorithm. They discuss user personalization, but it would be valuable to understand how it integrates with their search model.
 - What are the results of rank merging? Whether it improves precision or recall is an important question to answer.
 - What is the initial dataset for PageRank -- from which web page does the algorithm start? How many iterations would it require to converge on today's web is a fascinating question.
-
----
-
-*This review was written as part of CMU's 18-845: Internet Services course.*

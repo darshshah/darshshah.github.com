@@ -4,9 +4,10 @@ title: "Inside the Warehouse-Scale Computer: Datacenter Basics"
 date: 2024-12-16
 author: Darsh Shah
 tags: [datacenter, power-distribution, cooling, energy-efficiency, infrastructure]
+excerpt: "This book reframes the modern datacenter not as a collection of co-located servers, but as a single warehouse-scale computer requiring holistic design. Chapter 4 dives into the physical fundamentals -- tier classifications, power delivery chains (AC/DC, UPS, PDU), cooling systems (CRACs, chillers, cooling towers), and next-generation container-based designs -- showing that thoughtful engineering at the infrastructure level can yield significant energy savings."
 ---
 
-# Inside the Warehouse-Scale Computer: Datacenter Basics
+*This post is adapted from a paper review I wrote during CMU's 18-845: Internet Services course, where we studied seminal papers in distributed systems, web architecture, and virtualization. I've converted my reviews into blog posts to share them more broadly.*
 
 > **Paper:** *"The Datacenter as a Computer, Second Edition"* by Luiz Andre Barroso, Jimmy Clidaras, and Urs Holzle (Morgan & Claypool, 2013)
 
@@ -51,7 +52,3 @@ The overarching goal of the chapter is to make the reader aware of the different
 - **Impact of ambient temperature on datacenter design.** What effect does environmental temperature have on a datacenter? If one builds a datacenter in Nevada (a hot desert) versus Norway (cold most of the year), does the outside temperature meaningfully reduce cooling costs and power requirements? Or are datacenter walls sufficiently insulated from external conditions?
 
 - **Liquid nitrogen cooling.** Could liquid nitrogen cooling be used in datacenters? What would the power savings be if each rack had a liquid nitrogen cooling tower attached to it?
-
----
-
-*This review was written as part of CMU's 18-845: Internet Services course.*

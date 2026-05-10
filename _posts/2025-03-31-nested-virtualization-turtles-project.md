@@ -4,9 +4,10 @@ title: "Nested Virtualization and the Turtles Project: Hypervisors All the Way D
 date: 2025-03-31
 author: Darsh Shah
 tags: [virtualization, nested-virtualization, kvm, hypervisor, cloud-computing, performance]
+excerpt: "The Turtles Project demonstrates that hypervisors can efficiently run inside other hypervisors -- even without architectural support for nesting on x86. By implementing multi-dimensional paging for MMU virtualization and multi-level device assignment for I/O virtualization within Linux/KVM, the project achieves nested virtualization performance within 6-8% of single-level virtualization for common workloads, opening the door to live hypervisor migration and new security paradigms."
 ---
 
-# Nested Virtualization and the Turtles Project: Hypervisors All the Way Down
+*This post is adapted from a paper review I wrote during CMU's 18-845: Internet Services course, where we studied seminal papers in distributed systems, web architecture, and virtualization. I've converted my reviews into blog posts to share them more broadly.*
 
 > **Paper:** *"The Turtles Project: Design and Implementation of Nested Virtualization"* by M. Ben-Yehuda et al. (OSDI, 2010)
 
@@ -39,7 +40,3 @@ Nested VMs are important because they enable live migration of an entire hypervi
 - Since x86 does not support nested virtualization in hardware, would it be feasible to use binary translation for the L1 hypervisor while keeping the L0 hypervisor hardware-assisted?
 - With each additional nesting level, the exit multiplication increases. What is the practical maximum depth of nesting before performance degrades unacceptably? Performance likely saturates after just a few levels.
 - How does the root hypervisor schedule guest hypervisors? Consider a scenario with 5 guest hypervisors running on a host hypervisor alongside 4 guest OSes, where each guest hypervisor runs 2 guest OSes of its own -- that is 14 guest OSes in total. How is CPU time distributed? The resulting latency could lead to significant performance degradation.
-
----
-
-*This review was written as part of CMU's 18-845: Internet Services course.*

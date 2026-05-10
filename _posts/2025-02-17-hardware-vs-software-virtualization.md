@@ -4,9 +4,10 @@ title: "Hardware vs. Software Virtualization: A Deep Dive into x86 Techniques"
 date: 2025-02-17
 author: Darsh Shah
 tags: [virtualization, x86, binary-translation, hardware-virtualization, software-virtualization, performance]
+excerpt: "This paper provides a rigorous head-to-head comparison of software-based and hardware-based x86 virtualization. The surprising finding is that software VMMs outperform first-generation hardware VMMs for I/O-heavy and context-switch-heavy workloads, while hardware VMMs win on system-call-intensive workloads. The authors argue that the best path forward is a hybrid approach where hardware extensions complement existing software techniques."
 ---
 
-# Hardware vs. Software Virtualization: A Deep Dive into x86 Techniques
+*This post is adapted from a paper review I wrote during CMU's 18-845: Internet Services course, where we studied seminal papers in distributed systems, web architecture, and virtualization. I've converted my reviews into blog posts to share them more broadly.*
 
 > **Paper:** *"A Comparison of Software and Hardware Techniques for x86 Virtualization"* by K. Adams and O. Agesen (ASPLOS, 2006)
 
@@ -39,7 +40,3 @@ The key findings show that for compute-intensive benchmarks, both hardware and s
 - For hardware virtualization, must the guest OS use the same Instruction Set Architecture as the host? AMD, ARM, and PowerPC ISAs differ from x86 -- can a guest OS compiled for a particular ISA run on a host with a different ISA under hardware virtualization? Is on-the-fly ISA translation feasible in that scenario?
 - Is it possible to share I/O devices among multiple guest operating systems in hardware virtualization? Since the VMM traps I/O accesses, does hardware support enable simultaneous usage -- effectively multiplexing I/O peripherals across guests?
 - The VMCB includes a hardware-maintained shadow of the guest %eflags register. Does this mean each guest OS has a dedicated hardware register holding %eflags information? If so, how many such registers can the hardware support simultaneously?
-
----
-
-*This review was written as part of CMU's 18-845: Internet Services course.*

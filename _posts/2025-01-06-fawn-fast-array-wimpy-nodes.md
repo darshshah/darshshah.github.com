@@ -4,9 +4,10 @@ title: "FAWN: Trading Raw Speed for Radical Energy Efficiency"
 date: 2025-01-06
 author: Darsh Shah
 tags: [distributed-systems, energy-efficiency, key-value-store, flash-storage, cluster-architecture]
+excerpt: "FAWN proposes a cluster architecture built from many low-power (\"wimpy\") embedded processors paired with local flash storage, demonstrating that such a system can be several times more energy-efficient than traditional servers for I/O-bound workloads. The authors validate the concept through FAWN-KV, a consistent, replicated, highly available key-value store that achieves strong performance while drawing only a few watts per node."
 ---
 
-# FAWN: Trading Raw Speed for Radical Energy Efficiency
+*This post is adapted from a paper review I wrote during CMU's 18-845: Internet Services course, where we studied seminal papers in distributed systems, web architecture, and virtualization. I've converted my reviews into blog posts to share them more broadly.*
 
 > **Paper [1]:** *"FAWN: A Fast Array of Wimpy Nodes"* by David Andersen, Jason Franklin, Michael Kaminsky, Amar Phanishayee, Lawrence Tan, Vijay Vasudevan (SOSP, 2009)
 >
@@ -53,7 +54,3 @@ Both papers include extensive experiments and benchmarks demonstrating why the F
 - **Failure during chain reconfiguration.** What happens when an existing node dies without sending an ACK to its chained successor upon the joining of a new node? Is there a self-healing mechanism to recover from this scenario?
 
 - **Minimum cluster size.** What is the minimum number of nodes required for a FAWN-KV ring? If VID=3 and R=3, can a single node with three virtual nodes serve as its own replicas?
-
----
-
-*This review was written as part of CMU's 18-845: Internet Services course.*

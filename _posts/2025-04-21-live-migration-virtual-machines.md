@@ -4,9 +4,10 @@ title: "Live Migration of Virtual Machines: Seamless OS Migration with Minimal D
 date: 2025-04-21
 author: Darsh Shah
 tags: [virtualization, live-migration, xen, cloud-computing, fault-tolerance, load-balancing]
+excerpt: "This paper presents a technique for migrating running virtual machines across physical hosts with remarkably low downtime -- as little as 60 milliseconds. Using a pre-copy approach that iteratively transfers memory pages while the VM continues running, combined with dynamic rate limiting and Xen's shadow page tables for dirty-page tracking, the system enables transparent fault management, load balancing, and system maintenance in data center environments."
 ---
 
-# Live Migration of Virtual Machines: Seamless OS Migration with Minimal Downtime
+*This post is adapted from a paper review I wrote during CMU's 18-845: Internet Services course, where we studied seminal papers in distributed systems, web architecture, and virtualization. I've converted my reviews into blog posts to share them more broadly.*
 
 > **Paper:** *"Live Migration of Virtual Machines"* by Christopher Clark et al. (NSDI, 2005)
 
@@ -40,7 +41,3 @@ The paper explains the distinction between managed migration and self-migration,
 - What is the process for IP address management after live migration when multiple VMs run on the destination machine? Does the destination machine's IP address change? If so, what are the consequences for VMs already running there?
 - To log dirtied pages, Xen inserts shadow page tables underneath the running OS. With newer hardware virtualization support and Extended Page Tables (EPT), can the shadow page table method be improved? Could EPT be leveraged to make dirty-page tracking faster?
 - The rate-limiting technique uses minimum bandwidth to copy memory pages in the first round. If it takes 60 seconds at minimum speed but only 10 seconds at maximum bandwidth, would the latter be preferable? Faster initial transfer would reduce the total number of dirtied pages and subsequent rounds of copying.
-
----
-
-*This review was written as part of CMU's 18-845: Internet Services course.*

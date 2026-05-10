@@ -4,9 +4,10 @@ title: "Xen and KVM: Two Approaches to Virtualization"
 date: 2025-03-10
 author: Darsh Shah
 tags: [virtualization, xen, kvm, paravirtualization, hypervisor, linux, cloud-computing]
+excerpt: "Xen pioneered paravirtualization -- modifying guest OSes slightly to achieve near-native performance on a bare-metal hypervisor -- while KVM took a radically simpler approach by turning the Linux kernel itself into a hypervisor through a loadable kernel module that leverages hardware virtualization extensions. Together, these two systems represent the dominant open-source virtualization paradigms that underpin modern cloud infrastructure."
 ---
 
-# Xen and KVM: Two Approaches to Virtualization
+*This post is adapted from a paper review I wrote during CMU's 18-845: Internet Services course, where we studied seminal papers in distributed systems, web architecture, and virtualization. I've converted my reviews into blog posts to share them more broadly.*
 
 > **Papers:** *"Xen and the Art of Virtualization"* by P. Barham et al. (SOSP, 2003) and *"kvm: the Linux Virtual Machine Monitor"* by A. Kivity et al. (Linux Symposium, 2007)
 
@@ -39,7 +40,3 @@ Xen is an x86 virtual machine monitor that allows multiple commodity operating s
 - The KVM paper does not discuss live migration in detail. Can a VM on x86-64 be migrated to an i386 system? Can memory be increased or decreased after migration? How long does migration and convergence take? If a process tries to read a page that has already been transferred to another machine, how does KVM ensure this is not treated as a page fault?
 - Is it possible to share memory pages across Xen guests for consolidation? Can Xen overcommit memory? For instance, if the host has 8 GB of RAM, can it present 8 GB to each guest OS, or must the total memory allocated across all guests equal 8 GB?
 - Xen performs well even under uncooperative user applications because of isolation. But what about an uncooperative guest OS? Does Xen provide isolation at the guest OS level as well? Could a malicious guest OS compromise the Xen hypervisor itself?
-
----
-
-*This review was written as part of CMU's 18-845: Internet Services course.*

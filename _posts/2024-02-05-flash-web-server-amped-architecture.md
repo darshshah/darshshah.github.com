@@ -4,9 +4,10 @@ title: "Flash: A Web Server Built on the AMPED Architecture"
 date: 2024-02-05
 author: Darsh Shah
 tags: [web-servers, performance, event-driven, AMPED, systems-architecture]
+excerpt: "This paper introduces the AMPED (Asymmetric Multi-Process Event-Driven) architecture for web servers and evaluates it through the Flash web server. Flash combines the efficiency of event-driven designs with helper processes to handle blocking disk operations, achieving up to 50% better performance than Apache and Zeus across a variety of workloads."
 ---
 
-# Flash: A Web Server Built on the AMPED Architecture
+*This post is adapted from a paper review I wrote during CMU's 18-845: Internet Services course, where we studied seminal papers in distributed systems, web architecture, and virtualization. I've converted my reviews into blog posts to share them more broadly.*
 
 > **Paper:** *"Flash: An Efficient and Portable Web Server"* by V. Pai, P. Druschel, and W. Zwaenepoel (USENIX Annual Technical Conference, 1999)
 
@@ -39,7 +40,3 @@ The paper then details how Flash is designed and implemented, highlighting featu
 - Pathname translation caching provides a large benefit to server performance. What other caching techniques could further improve throughput?
 - How can disk-bound server performance be improved as dataset sizes grow and cache hit rates decline?
 - What is the performance difference when the helper processes in AMPED are implemented as kernel threads versus separate processes?
-
----
-
-*This review was written as part of CMU's 18-845: Internet Services course.*

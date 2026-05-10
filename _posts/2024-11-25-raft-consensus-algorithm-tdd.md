@@ -6,8 +6,6 @@ author: Darsh Shah
 tags: [distributed-systems, consensus, raft, test-driven-development, go]
 ---
 
-# Building Raft with Test-Driven Development in Go
-
 > **Report:** *"Building Raft - An Exploration of Test-Driven Development in Go"* by Sean Klein and Advaya Krishna (Student Project Report, 2015)
 
 ## TL;DR
@@ -41,7 +39,3 @@ The report describes the Raft consensus algorithm and details how the authors im
 - **Typographical error.** In Section 2.3.2, the "Illegal Read Log" paragraph contains the stray term "Non-majority Election Test" at the end, which appears to be a copy-paste artifact.
 
 - **Color-dependent figure.** Figure 4 relies on color to distinguish columns, which makes them indistinguishable when printed in grayscale. Labeling each individual column would have resolved this accessibility issue.
-
----
-
-*This review was written as part of CMU's 18-845: Internet Services course.*

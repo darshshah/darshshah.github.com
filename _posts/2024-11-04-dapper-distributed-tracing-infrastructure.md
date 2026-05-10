@@ -4,9 +4,10 @@ title: "Dapper: Google's Large-Scale Distributed Tracing Infrastructure"
 date: 2024-11-04
 author: Darsh Shah
 tags: [distributed-systems, google, tracing, monitoring, observability, performance]
+excerpt: "Dapper is Google's production distributed tracing system that provides low-overhead, application-transparent instrumentation across Google's massive infrastructure. Originally conceived as a tracing tool, it evolved into a general-purpose monitoring platform -- enabling engineers to understand the behavior of complex distributed workloads, diagnose performance issues, and discover faults across systems where a single query may touch thousands of backend services."
 ---
 
-# Dapper: Google's Large-Scale Distributed Tracing Infrastructure
+*This post is adapted from a paper review I wrote during CMU's 18-845: Internet Services course, where we studied seminal papers in distributed systems, web architecture, and virtualization. I've converted my reviews into blog posts to share them more broadly.*
 
 > **Paper:** *"Dapper, a Large-Scale Distributed Systems Tracing Infrastructure"* by Benjamin H. Sigelman, Luiz Andre Barroso, Mike Burrows, et al. (Google Technical Report, 2010)
 
@@ -40,7 +41,3 @@ In a Dapper trace tree, nodes represent basic units of work called spans, and ed
 - Can the level of logging be made more fine-grained? How difficult would it be to include data about memory usage, lock contention, process switching, and other system-level metrics? These factors can also play a significant role in performance degradation.
 - Users of the Dapper system must maintain separate local logs, as shown in Figure 5. Would it be possible to write trace data directly into Bigtable instead of relying on local logging? Could a centralized log queue -- similar to an append-only log from RAMCloud -- hold data from all servers and push it to Bigtable, eliminating the need for local disk storage?
 - What exactly is a "control path" in the context of Dapper (e.g., "when a thread handles a traced control path")? Is this a Google-specific concept, or does it simply refer to the execution path taken by a request?
-
----
-
-*This review was written as part of CMU's 18-845: Internet Services course.*

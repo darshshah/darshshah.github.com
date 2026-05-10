@@ -4,9 +4,10 @@ title: "Virtual Machine Monitors and Intel VT: Foundations of Modern Virtualizat
 date: 2025-01-27
 author: Darsh Shah
 tags: [virtualization, vmm, intel-vt, hypervisor, cpu-virtualization, memory-virtualization]
+excerpt: "These two papers provide a comprehensive look at virtualization from both the software and hardware sides. Rosenblum and Garfinkel (VMware's co-founder among them) lay out the design goals and implementation challenges of Virtual Machine Monitors, while the Intel VT paper details how hardware extensions -- including new CPU operation modes and control structures -- eliminate the need for complex software workarounds like binary translation and paravirtualization."
 ---
 
-# Virtual Machine Monitors and Intel VT: Foundations of Modern Virtualization
+*This post is adapted from a paper review I wrote during CMU's 18-845: Internet Services course, where we studied seminal papers in distributed systems, web architecture, and virtualization. I've converted my reviews into blog posts to share them more broadly.*
 
 > **Papers:** *"Virtual Machine Monitors: Current Technology and Future Trends"* by Mendel Rosenblum and Tal Garfinkel (IEEE Computer, 2005) and *"Intel Virtualization Technology: Hardware Support for Efficient Processor Virtualization"* by G. Neiger et al. (Intel Technology Journal, 2006)
 
@@ -40,7 +41,3 @@ The central design goal of Intel VT is to eliminate the need for CPU paravirtual
 - What is the maximum number of guest operating systems a VMM can support? Is there a hard limit (e.g., 16), or does it depend entirely on the resource utilization of each guest?
 - Do the specialized device drivers for I/O performance optimization provide an abstraction layer over underlying drivers, or do they access the hardware directly?
 - It would be interesting to examine whether hardware-assisted virtualization has become widely adopted in practice, and if so, how much performance improvement it provides over earlier approaches. This is especially relevant given that VMware, VirtualBox, and similar technologies remain prevalent today.
-
----
-
-*This review was written as part of CMU's 18-845: Internet Services course.*

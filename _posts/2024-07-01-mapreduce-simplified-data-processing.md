@@ -4,9 +4,10 @@ title: "MapReduce: Simplified Data Processing on Large Clusters"
 date: 2024-07-01
 author: Darsh Shah
 tags: [distributed-systems, mapreduce, google, parallel-computing, big-data]
+excerpt: "This landmark paper introduces MapReduce, a programming model and runtime framework for processing massive datasets across thousands of machines. By abstracting away the complexity of parallelization, fault tolerance, and load balancing behind two simple functions -- Map and Reduce -- the framework enabled Google engineers to write distributed computations with minimal effort while the system handled all the hard parts."
 ---
 
-# MapReduce: Simplified Data Processing on Large Clusters
+*This post is adapted from a paper review I wrote during CMU's 18-845: Internet Services course, where we studied seminal papers in distributed systems, web architecture, and virtualization. I've converted my reviews into blog posts to share them more broadly.*
 
 > **Paper:** *"MapReduce: Simplified Data Processing on Large Clusters"* by Jeffrey Dean and Sanjay Ghemawat (OSDI, 2004)
 
@@ -40,7 +41,3 @@ The computation takes a set of input key/value pairs and produces a set of outpu
 - Could two Map functions, or a Map and a Reduce function, run concurrently on the same machine? Since each is a separate process, is this feasible?
 - What happens if the intermediate data produced by the Map function is so large that it overwhelms the local disk? For example, if there are R reducers, the Map function will produce R files on the local disk. If R is very large, could the machine run out of disk space or exceed the maximum number of allowable files?
 - The authors mention backup execution of remaining in-progress tasks near the end of a computation. What would happen if the threshold were set much more aggressively -- say 20% -- so that no worker is ever idle? Would instantly assigning backup executions to idle workers be more efficient?
-
----
-
-*This review was written as part of CMU's 18-845: Internet Services course.*

@@ -4,9 +4,10 @@ title: "Comparing Web Server Architectures: Events, Threads, and Pipelines"
 date: 2024-04-08
 author: Darsh Shah
 tags: [web-servers, performance, event-driven, threads, pipeline, systems-architecture]
+excerpt: "This paper provides a rigorous performance comparison of event-driven (userver), thread-per-connection (Knot), and hybrid pipeline (WatPipe) web server architectures. After carefully tuning each server and eliminating confounding factors, the authors conclude that event-based and pipeline-based architectures outperform thread-per-connection designs -- refuting earlier claims that threading performs equally well."
 ---
 
-# Comparing Web Server Architectures: Events, Threads, and Pipelines
+*This post is adapted from a paper review I wrote during CMU's 18-845: Internet Services course, where we studied seminal papers in distributed systems, web architecture, and virtualization. I've converted my reviews into blog posts to share them more broadly.*
 
 > **Paper:** *"Comparing the Performance of Web Server Architectures"* by David Pariag, Tim Brecht, Ashif Harji, Peter Buhr, and Amol Shukla (EuroSys 2007)
 
@@ -40,7 +41,3 @@ The paper then describes in detail the three main server architectures -- userve
 - The authors assume that Capriccio provides a scalable, cooperatively scheduled, user-level threading package for use with high-concurrency servers. A worthwhile research question would be to verify this claim by comparing Capriccio against other threading libraries.
 - The authors refute the claim of a previous paper by arguing that Haboob is not as effective as originally claimed, since WatPipe outperforms the threaded model. However, I believe this comparison is not entirely fair -- WatPipe is implemented in C++ and lacks the dynamic controller that adjusts thread counts and performs load shedding at each stage in Haboob. Therefore, I do not think the authors have sufficient grounds to refute the previous paper's claims.
 - It would be interesting to see how to fine-tune the shared-SYMPED server under real memory constraints and how performance is affected by lock overhead and contention issues.
-
----
-
-*This review was written as part of CMU's 18-845: Internet Services course.*

@@ -4,9 +4,10 @@ title: "Paxos Made Live: Bridging Theory and Production Systems"
 date: 2024-07-22
 author: Darsh Shah
 tags: [distributed-systems, consensus, paxos, fault-tolerance, google, chubby]
+excerpt: "This paper chronicles the hard-won engineering lessons from building a production fault-tolerant database using the Paxos consensus algorithm inside Google's Chubby lock service. The key takeaway is that the gap between a theoretical algorithm and a working production system is enormous -- requiring solutions for state management, testing, performance, and numerous edge cases that the original Paxos paper never addressed."
 ---
 
-# Paxos Made Live: Bridging Theory and Production Systems
+*This post is adapted from a paper review I wrote during CMU's 18-845: Internet Services course, where we studied seminal papers in distributed systems, web architecture, and virtualization. I've converted my reviews into blog posts to share them more broadly.*
 
 > **Paper:** *"Paxos Made Live - An Engineering Perspective"* by Tushar Chandra, Robert Griesemer, and Joshua Redstone (PODC, 2007)
 
@@ -40,7 +41,3 @@ The authors ultimately conclude that converting pseudocode into a working produc
 - Since each snapshot is taken independently at each replica, can a replica end up replaying a snapshot from another replica even when some of the operations in that snapshot are already recorded locally? For example, if replica A has records up to sequence 9 and replica B has a snapshot containing sequences 5 through 15, will replica A replay sequences 5 through 15 from B's snapshot, or only those after 9? What happens when a replica fails while replaying a snapshot? How does it roll back?
 - Does the database described in the paper follow the ACID properties (Atomicity, Consistency, Isolation, and Durability)?
 - What is the memory overhead of maintaining an additional table for checksums? Is there a mechanism to validate the consistency of the checksum table itself?
-
----
-
-*This review was written as part of CMU's 18-845: Internet Services course.*
