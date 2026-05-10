@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Apple Business is Here"
-date: 2025-05-01
+date: 2026-05-01
 author: Darsh Shah
 tags: [apple, enterprise, apple-business, launch]
 excerpt: "Apple Business brings together device management, communication tools, and customer reach into one unified platform for businesses and schools. I've been working on this for a while, and it's exciting to see it out in the world."
