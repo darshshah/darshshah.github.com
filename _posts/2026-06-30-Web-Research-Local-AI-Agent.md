@@ -15,5 +15,5 @@ In the tutorial, I show how to buid a personal research agent that searches the 
 
 I had a great time writing this tutorial and I strongly believe that local on-device AI agents are the future. I am planning to create more of these tutorials later. 
 
-You can read it here https://www.freecodecamp.org/news/build-a-personal-ai-web-research-agent-with-ollama-and-qwen(https://www.freecodecamp.org/news/build-a-personal-ai-web-research-agent-with-ollama-and-qwen/)
+You can read it here [How to Build a Personal Web Research AI Agent with Ollama and Qwen](https://www.freecodecamp.org/news/build-a-personal-ai-web-research-agent-with-ollama-and-qwen/)
 
